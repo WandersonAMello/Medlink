@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Página de Testes{% endblock %}
+
+{% block content %}
+    <h1>Resultados dos Testes do Banco de Dados</h1>
+    <p>Estes testes verificam componentes-chave da infraestrutura do banco de dados.</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Teste</th>
+                <th>Status</th>
+                <th>Detalhes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.name }}</td>
+                <td>
+                    {% if result.status == 'OK' %}
+                        <span class="badge bg-success">OK</span>
+                    {% else %}
+                        <span class="badge bg-danger">Falha</span>
+                    {% endif %}
+                </td>
+                <td><small>{{ result.details }}</small></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

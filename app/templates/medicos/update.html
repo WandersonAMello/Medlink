@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Editar Médico{% endblock %}
+
+{% block content %}
+    <h1>Editar Médico</h1>
+    <form method="post">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" name="nome" id="nome" class="form-control" value="{{ medico[1] }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="especialidade" class="form-label">Especialidade</label>
+            <input type="text" name="especialidade" id="especialidade" class="form-control" value="{{ medico[2] or '' }}">
+        </div>
+        <div class="mb-3">
+            <label for="cpf" class="form-label">CPF (não pode ser alterado)</label>
+            <input type="text" name="cpf" id="cpf" class="form-control" value="{{ medico[3] }}" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" value="{{ medico[4] }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    </form>
+{% endblock %}

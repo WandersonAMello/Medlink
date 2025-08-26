@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Novo Médico{% endblock %}
+
+{% block content %}
+    <h1>Novo Médico</h1>
+    <form method="post">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" name="nome" id="nome" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="especialidade" class="form-label">Especialidade</label>
+            <input type="text" name="especialidade" id="especialidade" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" name="cpf" id="cpf" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input type="password" name="senha" id="senha" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+{% endblock %}
