@@ -185,7 +185,7 @@ O modelo lógico traduz o MER para um esquema de tabelas, atributos e relacionam
 | **Status** | `VARCHAR(50)` | `NOT NULL` | Status do pagamento (PENDENTE, PAGO, CANCELADO, FALHOU). |
 | **Metodo** | `VARCHAR(50)` | | Método de pagamento (CARTAO_CREDITO, PIX, DINHEIRO). |
 | **DataPagamento**| `TIMESTAMP` | | Data e hora em que o pagamento foi confirmado. |
-| **IdTransacaoExterna` | `VARCHAR(255)` | `UNIQUE` | ID da transação no gateway de pagamento para reconciliação. |
+| **IdTransacaoExterna** | `VARCHAR(255)` | `UNIQUE` | ID da transação no gateway de pagamento para reconciliação. |
 | **DataCriacao**| `TIMESTAMP` | `NOT NULL` | Data de criação do registro. |
 | **DataAtualizacao**| `TIMESTAMP` | `NOT NULL` | Data da última atualização. |
 
